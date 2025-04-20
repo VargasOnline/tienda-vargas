@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Vargas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Tienda Vargas</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#carrito">Carrito</a>
+    </nav>
+  </header>
+
+  <section id="productos">
+    <h2>Catálogo</h2>
+    <div class="producto" data-nombre="Aretes" data-precio="150">
+      <h3>Aretes</h3>
+      <button onclick="agregarAlCarrito('Aretes', 150)">Agregar</button>
+    </div>
+    <div class="producto" data-nombre="Pulseras" data-precio="200">
+      <h3>Pulseras</h3>
+      <button onclick="agregarAlCarrito('Pulseras', 200)">Agregar</button>
+    </div>
+    <div class="producto" data-nombre="Camisas" data-precio="350">
+      <h3>Camisas</h3>
+      <button onclick="agregarAlCarrito('Camisas', 350)">Agregar</button>
+    </div>
+  </section>
+
+  <section id="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="lista-carrito"></ul>
+    <p>Total: L.<span id="total">0</span></p>
+    <button onclick="realizarPago()">Pagar por WhatsApp o PayPal</button>
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form action="mailto:ciriarte1991@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Tu nombre" required><br>
+      <input type="email" name="email" placeholder="Tu correo" required><br>
+      <textarea name="mensaje" placeholder="Tu mensaje"></textarea><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tienda Vargas - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
